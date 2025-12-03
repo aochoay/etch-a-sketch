@@ -13,8 +13,12 @@ function createGrid(size) {
         div.style.width = squareSize + "px";
         div.style.height = squareSize + "px";
         div.style.boxSizing = "border-box";
+        div.style.backgroundColor = "black"
+        div.style.opacity = 0;
 
-        div.addEventListener("mouseover", () => {div.style.backgroundColor = "black"})
+        div.addEventListener("mouseover", () => {
+            div.style.opacity = parseFloat(div.style.opacity) + 0.1
+        })
 
         container.appendChild(div);
     }
